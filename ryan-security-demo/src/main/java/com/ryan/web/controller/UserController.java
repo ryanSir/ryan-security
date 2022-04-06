@@ -1,6 +1,7 @@
 package com.ryan.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.ryan.exception.RestException;
 import com.ryan.model.User;
 import org.assertj.core.util.Lists;
 import org.springframework.validation.BindingResult;
@@ -33,11 +34,12 @@ public class UserController {
     @GetMapping("/user/{id:\\d+}")
     @JsonView(User.UserDetailView.class)
     User getUserInfo(@PathVariable String id) {
-        System.out.println(id);
-        User user = new User();
-        user.setUsername("tome");
-        user.setPassword("ssss");
-        return user;
+        throw new RestException("sss");
+//        System.out.println(id);
+//        User user = new User();
+//        user.setUsername("tome");
+//        user.setPassword("ssss");
+//        return user;
     }
 
     @PostMapping("/user")
