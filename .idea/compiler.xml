@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ryan-security-core" />
+        <module name="ryan-security-app" />
+        <module name="ryan-security-browser" />
+        <module name="ryan-security-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ryan-security" target="1.8" />
+      <module name="ryan-security-app" target="1.8" />
+      <module name="ryan-security-browser" target="1.8" />
+      <module name="ryan-security-core" target="1.8" />
+      <module name="ryan-security-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

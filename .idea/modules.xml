@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ryan-security.iml" filepath="$PROJECT_DIR$/.idea/ryan-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" filepath="$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" filepath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" filepath="$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" filepath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" />
+    </modules>
+  </component>
+</project>
