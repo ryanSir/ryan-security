@@ -21,7 +21,7 @@ public class UserController {
 
     @GetMapping("/user")
     @JsonView(User.UserSimpleView.class)
-    List<User> query(@RequestParam(name = "username", required = false, defaultValue = "tom") String username) {
+    List<User> query(@RequestParam(name = "username", required = false, defaultValue = "tom") String username){
         System.out.println(username);
         List<User> users = Lists.newArrayList();
         users.add(new User());
