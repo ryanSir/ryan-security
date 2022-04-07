@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="拦截器">
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/aspect/TimeAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649234278562</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="拦截器">
+      <created>1649321102883</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649321102884</updated>
+    </task>
+    <task id="LOCAL-00008" summary="拦截器">
+      <created>1649321137617</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649321137617</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,14 +185,9 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/aspect/TimeAspect.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,5 @@
 package com.ryan.web.interceptor;
 
-import org.springframework.boot.actuate.endpoint.jmx.DataEndpointMBean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -19,7 +18,7 @@ public class TimeInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handlerController) throws Exception {
-        System.out.println("preHandle");
+        System.out.println("Interceptor preHandle");
 
         System.out.println(((HandlerMethod) handlerController).getBean().getClass().getName());
         System.out.println(((HandlerMethod) handlerController).getMethod().getName());
@@ -30,14 +29,14 @@ public class TimeInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        System.out.println("postHandle");
+        System.out.println("Interceptor postHandle");
         Long start = (Long) httpServletRequest.getAttribute("startTime");
         System.out.println("time interceptor 耗时：" + (new Date().getTime() - start));
     }
 
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-        System.out.println("afterHandle");
+        System.out.println("Interceptor afterHandle");
         Long start = (Long) httpServletRequest.getAttribute("startTime");
         System.out.println("time interceptor 耗时：" + (new Date().getTime() - start));
 
