@@ -2,11 +2,13 @@ package com.ryan.web.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.ryan.exception.RestException;
+import com.ryan.model.FileInfo;
 import com.ryan.model.User;
 import org.assertj.core.util.Lists;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -17,6 +19,8 @@ import java.util.List;
  */
 @RestController
 public class UserController {
+
+
 
 
     @GetMapping("/user")

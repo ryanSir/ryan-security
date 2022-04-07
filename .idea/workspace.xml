@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="拦截器">
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/aspect/TimeAspect.java" afterDir="false" />
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="切片">
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/model/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/test/java/com/ryan/web/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/test/java/com/ryan/web/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/test-classes/com/ryan/web/controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/test-classes/com/ryan/web/controller/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
       <recent name="com.ryan.exception" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ryan.DemoApplication" />
       <module name="ryan-security-demo" />
@@ -85,9 +92,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserControllerTest.whenUploadSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ryan-security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ryan.web.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ryan.web.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ryan.web.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="whenUploadSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.UserControllerTest.whenUploadSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649321137617</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="切片">
+      <created>1649325920188</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1649325920189</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +205,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="过滤器" />
     <MESSAGE value="拦截器" />
-    <option name="LAST_COMMIT_MESSAGE" value="拦截器" />
+    <MESSAGE value="切片" />
+    <option name="LAST_COMMIT_MESSAGE" value="切片" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

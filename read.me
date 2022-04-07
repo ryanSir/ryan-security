@@ -5,13 +5,14 @@
 3>. 过滤器配置（Filter），以及引入外部过滤器配置：WebConfig ,过滤器是javax框架里提供的，并不会知道请求最终流向哪个控制器来处理，可以用拦截器，是spring框架提供的
 4>. 拦截器（Interceptor）：TimeInterceptor ,afterCompletion 不能捕获自定义异常, 个人觉得是被捕获处理掉了。
     1. 拦截器ObjectHandler 只能获取接口的声明，并不能获取具体参数
-5>. 切片（Aspect）：
+5>. 切面（Aspect）：
     1. 切入点(注解)
         1.1 在哪些方法上起作用
         1.2 在什么时候起作用
     2. 增强(方法)
         2.1 起作用时执行的业务逻辑
 6>. 执行顺序：Filter > Interceptor > ControllerAdvice > Aspect > Controller
+7>. 文件上传和下载
 
 
 
