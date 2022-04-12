@@ -13,7 +13,7 @@ import java.util.Date;
  * @author ryan
  * @version Id: TimeInterceptor, v 0.1 2022/4/6 4:16 PM ryan Exp $
  */
-@Component
+//@Component
 public class TimeInterceptor implements HandlerInterceptor {
 
     @Override

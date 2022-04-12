@@ -16,7 +16,7 @@ import java.util.List;
  * @author ryan
  * @version Id: WebConfig, v 0.1 2022/4/6 4:07 PM ryan Exp $
  */
-@Configuration
+//@Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
@@ -28,7 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(timeInterceptor);
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean timeFilter(){
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         TimeFilter timeFilter = new TimeFilter();

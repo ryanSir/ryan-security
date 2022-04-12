@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="切片">
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/model/FileInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/FileController.java" afterDir="false" />
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="文件上传和下载">
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/DeferredResultHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/MockQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/QueueListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-app/ryan-security-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/ryan-security-core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/test/java/com/ryan/web/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/test/java/com/ryan/web/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/test-classes/com/ryan/web/controller/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/test-classes/com/ryan/web/controller/UserControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649325920189</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="文件上传和下载">
+      <created>1649359462661</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649359462661</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +208,8 @@
     <MESSAGE value="过滤器" />
     <MESSAGE value="拦截器" />
     <MESSAGE value="切片" />
-    <option name="LAST_COMMIT_MESSAGE" value="切片" />
+    <MESSAGE value="文件上传和下载" />
+    <option name="LAST_COMMIT_MESSAGE" value="文件上传和下载" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -220,6 +223,16 @@
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/aspect/TimeAspect.java</url>
           <line>22</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/QueueListener.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

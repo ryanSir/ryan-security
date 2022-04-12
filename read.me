@@ -13,6 +13,9 @@
         2.1 起作用时执行的业务逻辑
 6>. 执行顺序：Filter > Interceptor > ControllerAdvice > Aspect > Controller
 7>. 文件上传和下载
+8>. 多线程提高REST服务性能
+    8.1 Runnable 的实现方式副线程必须是由主线程发起调用，满足不了复杂场景
+    8.2 DeferredResult作为返回参数时，必须有结果，否则会卡住
 
 
 
