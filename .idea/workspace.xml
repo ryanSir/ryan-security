@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="文件上传和下载">
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="多线程、DeferredResult">
       <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/DeferredResultHolder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/MockQueue.java" afterDir="false" />
@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649359462661</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="多线程、DeferredResult">
+      <created>1649724684647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649724684647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,7 +216,8 @@
     <MESSAGE value="拦截器" />
     <MESSAGE value="切片" />
     <MESSAGE value="文件上传和下载" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件上传和下载" />
+    <MESSAGE value="多线程、DeferredResult" />
+    <option name="LAST_COMMIT_MESSAGE" value="多线程、DeferredResult" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -230,9 +238,14 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/QueueListener.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
