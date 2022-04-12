@@ -1,5 +1,6 @@
 package com.ryan.web.async;
 
+import io.swagger.annotations.Api;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.RandomUtils;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ import java.util.concurrent.Callable;
  * @version Id: AsyncController, v 0.1 2022/4/11 11:13 AM ryan Exp $
  */
 @RestController
+@Api(tags = "AsyncController")
 public class AsyncController {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -51,7 +53,6 @@ public class AsyncController {
 //            }
 //        };
         logger.info("主线程返回");
-        logger.info("result,", result);
         return result;
     }
 

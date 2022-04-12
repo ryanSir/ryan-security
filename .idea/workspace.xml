@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="多线程、DeferredResult">
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/DeferredResultHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/MockQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/QueueListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/Swagger2Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/interceptor/TimeInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ryan.web.config" />
       <recent name="com.ryan.exception" />
     </key>
   </component>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649724684647</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="多线程、DeferredResult">
+      <created>1649724846563</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1649724846563</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

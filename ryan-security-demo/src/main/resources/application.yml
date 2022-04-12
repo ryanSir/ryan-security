@@ -15,5 +15,8 @@ security:
 server:
   port: 8080
 
+swagger:
+  enable: true
+
 
 
