@@ -51,6 +51,10 @@
             <artifactId>swagger-bootstrap-ui</artifactId>
             <version>1.9.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock</artifactId>
+        </dependency>
     </dependencies>
 
     <!-- 将三方jar打包进jar，作为一个可提供服务的jar -->

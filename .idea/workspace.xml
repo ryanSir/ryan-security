@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="多线程、DeferredResult">
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/config/Swagger2Config.java" afterDir="false" />
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="swagger">
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/wiremock/MockServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/wiremock-jre8-standalone-2.33.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/DemoApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +59,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ryan-security-demo/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ryan-security-demo/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -73,13 +75,26 @@
       <recent name="com.ryan.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DemoApplication">
+  <component name="RunManager" selected="Application.MockServer">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ryan.DemoApplication" />
       <module name="ryan-security-demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ryan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ryan.web.wiremock.MockServer" />
+      <module name="ryan-security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ryan.web.wiremock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,6 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MockServer" />
         <item itemvalue="Application.DemoApplication" />
         <item itemvalue="JUnit.UserControllerTest.whenUploadSuccess" />
       </list>
@@ -203,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649724846563</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="swagger">
+      <created>1649749641072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649749641073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +247,8 @@
     <MESSAGE value="切片" />
     <MESSAGE value="文件上传和下载" />
     <MESSAGE value="多线程、DeferredResult" />
-    <option name="LAST_COMMIT_MESSAGE" value="多线程、DeferredResult" />
+    <MESSAGE value="swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -241,17 +265,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
-          <line>41</line>
+          <line>43</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
-          <line>38</line>
+          <line>40</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
