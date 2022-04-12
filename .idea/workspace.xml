@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="swagger">
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/wiremock/MockServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/wiremock-jre8-standalone-2.33.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security基本原理.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,20 @@
       <recent name="com.ryan.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MockServer">
+  <component name="RunManager" selected="Application.DemoApplication">
+    <configuration name="BrowserSecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ryan.security.browser.BrowserSecurityConfig" />
+      <module name="ryan-security-browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ryan.security.browser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ryan.DemoApplication" />
       <module name="ryan-security-demo" />
@@ -102,6 +114,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyUserDetailService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ryan.security.browser.MyUserDetailService" />
+      <module name="ryan-security-browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ryan.security.browser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserControllerTest.whenUploadSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ryan-security-demo" />
       <extension name="coverage">
@@ -120,8 +145,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MockServer" />
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="Application.BrowserSecurityConfig" />
+        <item itemvalue="Application.MyUserDetailService" />
+        <item itemvalue="Application.MockServer" />
         <item itemvalue="JUnit.UserControllerTest.whenUploadSuccess" />
       </list>
     </recent_temporary>
@@ -226,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649749641073</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="swagger">
+      <created>1649751467111</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1649751467111</updated>
+    </task>
+    <task id="LOCAL-00015" summary="swagger">
+      <created>1649751549822</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1649751549822</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,11 +300,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/aspect/TimeAspect.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
           <line>43</line>
           <option name="timeStamp" value="10" />
@@ -277,6 +313,26 @@
           <url>file://$PROJECT_DIR$/ryan-security-demo/src/main/java/com/ryan/web/async/AsyncController.java</url>
           <line>42</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/4.2.3.RELEASE/spring-security-crypto-4.2.3.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class</url>
+          <line>39</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
