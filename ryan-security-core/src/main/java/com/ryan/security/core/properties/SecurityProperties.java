@@ -11,6 +11,8 @@ public class SecurityProperties {
 
     private BrowserProperties browser = new BrowserProperties();
 
+    private ValidateCodeProperties code = new ValidateCodeProperties();
+
 
     public BrowserProperties getBrowser() {
         return browser;
@@ -18,5 +20,23 @@ public class SecurityProperties {
 
     public void setBrowser(BrowserProperties browser) {
         this.browser = browser;
+    }
+
+    /**
+     * Getter method for property <tt>code</tt>.
+     *
+     * @return property value of code
+     */
+    public ValidateCodeProperties getCode() {
+        return code;
+    }
+
+    /**
+     * Setter method for property <tt>code</tt>.
+     *
+     * @param code value to be assigned to property code
+     */
+    public void setCode(ValidateCodeProperties code) {
+        this.code = code;
     }
 }

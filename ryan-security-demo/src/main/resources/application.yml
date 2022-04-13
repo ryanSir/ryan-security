@@ -23,6 +23,11 @@ ryan:
     browser:
       loginPage: /demo-signIn.html
       loginType: JSON
+    code:
+      image:
+        length: 3
+        width: 100
+        url: /order
 
 
 
