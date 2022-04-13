@@ -8,6 +8,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+import javax.annotation.Resource;
 
 /**
  * WebSecurityConfigurerAdapter 安全应用适配器
@@ -21,11 +25,16 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private SecurityProperties securityProperties;
 
+    @Resource(name = "browserAuthenticationSuccessHandler")
+    private AuthenticationSuccessHandler authenticationSuccessHandler;
+
+    @Resource(name = "browserAuthenticationFailHandler")
+    private AuthenticationFailureHandler browserAuthenticationFailHandler;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         // 对输入的密码加密
         return new BCryptPasswordEncoder();
-
         // 自定义实现方式
 //        return new PasswordEncoder() {
 //            @Override
@@ -43,7 +52,6 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 //        };
     }
 
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -54,6 +62,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/authentication/require")
                 // 默认处理 /login 请求才会进入UsernamePasswordAuthenticationFilter
                 .loginProcessingUrl("/authentication/form")
+                .successHandler(authenticationSuccessHandler)
+                .failureHandler(browserAuthenticationFailHandler)
                 .and()
                 // 授权配置 - 任何配置都要认证,除login.html不需要认证
                 .authorizeRequests()
