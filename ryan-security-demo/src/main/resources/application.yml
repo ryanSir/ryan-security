@@ -18,5 +18,10 @@ server:
 swagger:
   enable: true
 
+ryan:
+  security:
+    browser:
+      loginPage: /demo-signIn.html
+
 
 

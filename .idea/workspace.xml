@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="swagger">
-      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security基本原理.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="自定义用户认证逻辑">
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/support/SimpleResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/resources/resources/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/BrowserProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/SecurityCoreConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/SecurityProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/resources/demo-signIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/处理不同类型请求跳转逻辑.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649751549822</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="自定义用户认证逻辑">
+      <created>1649759788817</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1649759788817</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,7 +303,8 @@
     <MESSAGE value="文件上传和下载" />
     <MESSAGE value="多线程、DeferredResult" />
     <MESSAGE value="swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger" />
+    <MESSAGE value="自定义用户认证逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义用户认证逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -315,24 +330,24 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/4.2.3.RELEASE/spring-security-crypto-4.2.3.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class</url>
           <line>39</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java</url>
-          <line>25</line>
+          <line>32</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java</url>
-          <line>30</line>
+          <line>37</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

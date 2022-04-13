@@ -29,7 +29,9 @@ public class MyUserDetailService implements UserDetailsService {
         logger.info("登录用户名：" + username);
 //        return new User(username,"123456", AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
-        return new User(username, passwordEncoder.encode("123456"), true, true, true, true, AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+        return new User(username, passwordEncoder.encode("123456"),
+                true, true, true, true,
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
     }
 
