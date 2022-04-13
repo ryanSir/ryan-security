@@ -5,6 +5,10 @@ import com.ryan.exception.RestException;
 import com.ryan.model.FileInfo;
 import com.ryan.model.User;
 import org.assertj.core.util.Lists;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +24,20 @@ import java.util.List;
 @RestController
 public class UserController {
 
+    @GetMapping("/me")
+    public Object getCurrentUser(Authentication authentication) {
+//        return SecurityContextHolder.getContext().getAuthentication();
+        return authentication;
+    }
 
-
+    @GetMapping("/getCurrentUserDetail")
+    public Object getCurrentUserDetail(@AuthenticationPrincipal UserDetails user) {
+        return user;
+    }
 
     @GetMapping("/user")
     @JsonView(User.UserSimpleView.class)
-    List<User> query(@RequestParam(name = "username", required = false, defaultValue = "tom") String username){
+    List<User> query(@RequestParam(name = "username", required = false, defaultValue = "tom") String username) {
         System.out.println(username);
         List<User> users = Lists.newArrayList();
         users.add(new User());
@@ -78,7 +90,7 @@ public class UserController {
     }
 
     @DeleteMapping("/user/{id:\\d+}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         System.out.println(id);
     }
 
