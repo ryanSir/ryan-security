@@ -22,14 +22,14 @@ public class MyUserDetailService implements UserDetailsService {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Resource
-    private PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder; 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         logger.info("登录用户名：" + username);
 //        return new User(username,"123456", AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
-        return new User(username, passwordEncoder.encode("123456"),
+        return new User(username, passwordEncoder.encode("123"),
                 true, true, true, true,
                 AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 

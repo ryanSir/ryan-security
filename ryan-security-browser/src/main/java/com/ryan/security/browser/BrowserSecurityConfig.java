@@ -7,13 +7,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import javax.annotation.Resource;
+import javax.sql.DataSource;
 
 /**
  * WebSecurityConfigurerAdapter 安全应用适配器
@@ -32,6 +36,12 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Resource(name = "browserAuthenticationFailHandler")
     private AuthenticationFailureHandler browserAuthenticationFailHandler;
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -54,6 +64,14 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 //        };
     }
 
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository(){
+        JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
+        tokenRepository.setDataSource(dataSource);
+//        tokenRepository.setCreateTableOnStartup(true);
+        return tokenRepository;
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
@@ -66,12 +84,17 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 // 定义登录页面 注意，下面配置任何请求都要进行验证，所以要去除login.html请求校验
-                .loginPage("/authentication/require")
-                // 默认处理 /login 请求才会进入UsernamePasswordAuthenticationFilter
-                .loginProcessingUrl("/authentication/form")
-                .successHandler(authenticationSuccessHandler)
-                .failureHandler(browserAuthenticationFailHandler)
-                .and()
+                    .loginPage("/authentication/require")
+                    // 默认处理 /login 请求才会进入UsernamePasswordAuthenticationFilter
+                    .loginProcessingUrl("/authentication/form")
+                    .successHandler(authenticationSuccessHandler)
+                    .failureHandler(browserAuthenticationFailHandler)
+                    .and()
+                .rememberMe()
+                    .tokenRepository(persistentTokenRepository())
+                    .tokenValiditySeconds(securityProperties.getBrowser().getRememberMeSeconds())
+                    .userDetailsService(userDetailsService)
+                    .and()
                 // 授权配置 - 任何配置都要认证,除login.html不需要认证
                 .authorizeRequests()
                 .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/code/image").permitAll()
