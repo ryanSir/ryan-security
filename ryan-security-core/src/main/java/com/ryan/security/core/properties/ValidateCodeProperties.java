@@ -8,6 +8,8 @@ public class ValidateCodeProperties {
 
     private ImageCodeProperties image = new ImageCodeProperties();
 
+    private SmsCodeProperties sms = new SmsCodeProperties();
+
     /**
      * Getter method for property <tt>image</tt>.
      *
@@ -24,5 +26,23 @@ public class ValidateCodeProperties {
      */
     public void setImage(ImageCodeProperties image) {
         this.image = image;
+    }
+
+    /**
+     * Getter method for property <tt>sms</tt>.
+     *
+     * @return property value of sms
+     */
+    public SmsCodeProperties getSms() {
+        return sms;
+    }
+
+    /**
+     * Setter method for property <tt>sms</tt>.
+     *
+     * @param sms value to be assigned to property sms
+     */
+    public void setSms(SmsCodeProperties sms) {
+        this.sms = sms;
     }
 }

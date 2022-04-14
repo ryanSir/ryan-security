@@ -1,9 +1,11 @@
 package com.ryan.security.core.validate.code;
 
 import com.ryan.security.core.properties.SecurityProperties;
+import com.ryan.security.core.validate.code.sms.SmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
+import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,13 +32,19 @@ public class ValidateCodeController {
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
     @Autowired
-    private ValidateCodeGenerator validateCodeGenerator;
+    private ValidateCodeGenerator imageCodeGenerator;
+
+    @Autowired
+    private ValidateCodeGenerator smsCodeGenerator;
+
+    @Autowired
+     private SmsCodeSender smsCodeSender;
 
     @GetMapping("/code/image")
     public void createCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         // 根据随机数生成图片
-        ImageCode imageCode = validateCodeGenerator.generateCode(new ServletWebRequest(request));
+        ImageCode imageCode = (ImageCode) imageCodeGenerator.generateCode(new ServletWebRequest(request));
 
         // 将随机数存到session中
         sessionStrategy.setAttribute(new ServletWebRequest(request), SESSION_KEY, imageCode);
@@ -46,5 +54,18 @@ public class ValidateCodeController {
 
     }
 
+    @GetMapping("/code/sms")
+    public void sms(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletRequestBindingException {
+
+        // 根据随机数生成图片
+        ValidateCode smsCode = smsCodeGenerator.generateCode(new ServletWebRequest(request));
+
+        // 将随机数存到session中
+        sessionStrategy.setAttribute(new ServletWebRequest(request), SESSION_KEY, smsCode);
+
+        String mobile = ServletRequestUtils.getRequiredStringParameter(request, "mobile");
+        smsCodeSender.send(mobile, smsCode.getCode());
+
+    }
 
 }

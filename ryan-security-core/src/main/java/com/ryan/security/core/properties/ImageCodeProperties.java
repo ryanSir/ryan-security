@@ -4,12 +4,14 @@ package com.ryan.security.core.properties;
  * @author ryan
  * @version Id: ImageCodeProperties, v 0.1 2022/4/13 5:24 PM ryan Exp $
  */
-public class ImageCodeProperties {
+public class ImageCodeProperties extends SmsCodeProperties {
+
+    public ImageCodeProperties() {
+        setLength(4);
+    }
 
     private int width = 67;
     private int height = 23;
-    private int length = 4;
-    private int expireIn = 60;
 
     private String url;
 
@@ -65,41 +67,5 @@ public class ImageCodeProperties {
      */
     public void setHeight(int height) {
         this.height = height;
-    }
-
-    /**
-     * Getter method for property <tt>length</tt>.
-     *
-     * @return property value of length
-     */
-    public int getLength() {
-        return length;
-    }
-
-    /**
-     * Setter method for property <tt>length</tt>.
-     *
-     * @param length value to be assigned to property length
-     */
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    /**
-     * Getter method for property <tt>expireIn</tt>.
-     *
-     * @return property value of expireIn
-     */
-    public int getExpireIn() {
-        return expireIn;
-    }
-
-    /**
-     * Setter method for property <tt>expireIn</tt>.
-     *
-     * @param expireIn value to be assigned to property expireIn
-     */
-    public void setExpireIn(int expireIn) {
-        this.expireIn = expireIn;
     }
 }

@@ -97,7 +97,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                 // 授权配置 - 任何配置都要认证,除login.html不需要认证
                 .authorizeRequests()
-                .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/code/image").permitAll()
+                .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/code/*").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
