@@ -28,6 +28,8 @@ ryan:
         length: 3
         width: 100
         url: /order
+      sms:
+        url: /order
 
 
 

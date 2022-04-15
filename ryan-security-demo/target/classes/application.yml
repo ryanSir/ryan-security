@@ -18,10 +18,18 @@ server:
 swagger:
   enable: true
 
-#ryan:
-#  security:
-#    browser:
-#      loginPage: /demo-signIn.html
+ryan:
+  security:
+    browser:
+      loginPage: /demo-signIn.html
+      loginType: JSON
+    code:
+      image:
+        length: 3
+        width: 100
+        url: /order
+      sms:
+        url: /order
 
 
 

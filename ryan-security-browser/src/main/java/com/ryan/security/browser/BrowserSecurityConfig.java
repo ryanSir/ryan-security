@@ -1,6 +1,9 @@
 package com.ryan.security.browser;
 
+import com.ryan.security.core.auth.mobile.SmsCodeAuthenticationFilter;
+import com.ryan.security.core.auth.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.ryan.security.core.properties.SecurityProperties;
+import com.ryan.security.core.validate.code.SmsCodeFilter;
 import com.ryan.security.core.validate.code.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -43,6 +46,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         // 对输入的密码加密
@@ -79,9 +85,15 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         validateCodeFilter.setSecurityProperties(securityProperties);
         validateCodeFilter.afterPropertiesSet();
 
+        SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
+        smsCodeFilter.setAuthenticationFailureHandler(browserAuthenticationFailHandler);
+        smsCodeFilter.setSecurityProperties(securityProperties);
+        smsCodeFilter.afterPropertiesSet();
+
         // 认证方式 - 表单登录
 //        http.httpBasic() 不通过表单登录方式登录，最初始的方式
-        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+        http.addFilterBefore(smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 // 定义登录页面 注意，下面配置任何请求都要进行验证，所以要去除login.html请求校验
                     .loginPage("/authentication/require")
@@ -97,11 +109,12 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                 // 授权配置 - 任何配置都要认证,除login.html不需要认证
                 .authorizeRequests()
-                .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/code/*").permitAll()
+                .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),"/authentication/mobile","/code/*").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 // 暂时关闭csrf跨站请求防护功能
-                .csrf().disable();
+                .csrf().disable()
+                .apply(smsCodeAuthenticationSecurityConfig);
     }
 }

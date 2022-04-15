@@ -29,6 +29,8 @@ public class ValidateCodeController {
 
     public static final String SESSION_KEY = "SESSION_KEY_IMAGE_CODE";
 
+    public static final String SESSION_KEY_SMS = "SESSION_KEY_SMS";
+
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
     @Autowired
@@ -61,7 +63,7 @@ public class ValidateCodeController {
         ValidateCode smsCode = smsCodeGenerator.generateCode(new ServletWebRequest(request));
 
         // 将随机数存到session中
-        sessionStrategy.setAttribute(new ServletWebRequest(request), SESSION_KEY, smsCode);
+        sessionStrategy.setAttribute(new ServletWebRequest(request), SESSION_KEY_SMS, smsCode);
 
         String mobile = ServletRequestUtils.getRequiredStringParameter(request, "mobile");
         smsCodeSender.send(mobile, smsCode.getCode());
