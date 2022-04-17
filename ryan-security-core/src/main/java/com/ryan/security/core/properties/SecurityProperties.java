@@ -13,6 +13,25 @@ public class SecurityProperties {
 
     private ValidateCodeProperties code = new ValidateCodeProperties();
 
+    private SocialProperties social =new SocialProperties();
+
+    /**
+     * Getter method for property <tt>social</tt>.
+     *
+     * @return property value of social
+     */
+    public SocialProperties getSocial() {
+        return social;
+    }
+
+    /**
+     * Setter method for property <tt>social</tt>.
+     *
+     * @param social value to be assigned to property social
+     */
+    public void setSocial(SocialProperties social) {
+        this.social = social;
+    }
 
     public BrowserProperties getBrowser() {
         return browser;

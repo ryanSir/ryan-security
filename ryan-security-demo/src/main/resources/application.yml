@@ -20,6 +20,10 @@ swagger:
 
 ryan:
   security:
+    social:
+      qq:
+        app-id:
+        app-secret:
     browser:
       loginPage: /demo-signIn.html
       loginType: JSON

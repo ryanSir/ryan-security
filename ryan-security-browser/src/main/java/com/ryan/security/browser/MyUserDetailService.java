@@ -8,6 +8,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.social.security.SocialUser;
+import org.springframework.social.security.SocialUserDetails;
+import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -17,12 +20,12 @@ import javax.annotation.Resource;
  * @version Id: MyUserDetailService, v 0.1 2022/4/12 5:18 PM ryan Exp $
  */
 @Component
-public class MyUserDetailService implements UserDetailsService {
+public class MyUserDetailService implements UserDetailsService, SocialUserDetailsService {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Resource
-    private PasswordEncoder passwordEncoder; 
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -35,4 +38,13 @@ public class MyUserDetailService implements UserDetailsService {
 
     }
 
+    @Override
+    public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+        logger.info("社交登录用户名ID：" + userId);
+//        return new User(username,"123456", AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+
+        return new SocialUser(userId, passwordEncoder.encode("123"),
+                true, true, true, true,
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+    }
 }
