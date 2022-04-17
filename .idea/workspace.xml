@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="发送短信验证码">
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/auth/mobile/SmsCodeAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/auth/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/auth/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/auth/mobile/SmsCodeAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/validate/code/SmsCodeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/短信登录逻辑.png" afterDir="false" />
+    <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="短信登录逻辑">
+      <change afterPath="$PROJECT_DIR$/oauth协议授权认证流程.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springsocial相关类.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/授权码模式流程.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/validate/code/ValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/validate/code/ValidateCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/com/ryan/web/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649930774955</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="短信登录逻辑">
+      <created>1649992740405</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649992740405</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,7 +363,8 @@
     <MESSAGE value="图形验证码重构" />
     <MESSAGE value="实现&quot;记住我&quot;功能" />
     <MESSAGE value="发送短信验证码" />
-    <option name="LAST_COMMIT_MESSAGE" value="发送短信验证码" />
+    <MESSAGE value="短信登录逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="短信登录逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -418,6 +418,16 @@
           <url>file://$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/validate/code/SmsCodeFilter.java</url>
           <line>92</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
