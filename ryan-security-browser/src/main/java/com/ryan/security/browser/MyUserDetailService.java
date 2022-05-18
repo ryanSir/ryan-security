@@ -34,7 +34,7 @@ public class MyUserDetailService implements UserDetailsService, SocialUserDetail
 
         return new User(username, passwordEncoder.encode("123"),
                 true, true, true, true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE-USER"));
 
     }
 
@@ -45,6 +45,6 @@ public class MyUserDetailService implements UserDetailsService, SocialUserDetail
 
         return new SocialUser(userId, passwordEncoder.encode("123"),
                 true, true, true, true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE-USER"));
     }
 }

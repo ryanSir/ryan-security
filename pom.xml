@@ -16,7 +16,6 @@
     </modules>
     <packaging>pom</packaging>
 
-    <dependencies></dependencies>
 
     <dependencyManagement>
         <dependencies>

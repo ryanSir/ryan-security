@@ -1,4 +1,4 @@
-package com.ryan.security.browser.support;
+package com.ryan.security.core.support;
 
 /**
  * @author ryan

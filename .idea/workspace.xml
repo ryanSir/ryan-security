@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fd172bf-36c3-4194-9aec-5286e44b82f3" name="Changes" comment="oauth social">
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/QQProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/SocialProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/SocialConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/api/QQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/api/QQImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/api/QQUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/config/QQAutoConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/connect/QQAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/connect/QQConnectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/social/qq/connect/QQServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oauth2重构登录方式.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-app/src/main/java/com/ryan/security/app/authentication/BrowserAuthenticationFailHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-app/src/main/java/com/ryan/security/app/authentication/BrowserAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-app/src/main/java/com/ryan/security/app/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/AppAuthorizationServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/AppResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-oauth简介.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/ryan-security-browser.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/SecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/properties/SecurityProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationFailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationFailHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/support/SimpleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/support/SimpleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/ryan-security-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/resources/demo-signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/src/main/resources/resources/demo-signIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ryan-security-demo/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +80,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ryan-security-browser/src/main/resources/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -82,11 +88,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ryan-security-app/src/main/java/com/ryan/security/app/authentication" />
       <recent name="$PROJECT_DIR$/ryan-security-browser/src/main/resources/resources" />
       <recent name="$PROJECT_DIR$/ryan-security-demo/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ryan.security.core.support" />
       <recent name="com.ryan.security.core.validate.code" />
       <recent name="com.ryan.security.core.properties" />
       <recent name="com.ryan.web.config" />
@@ -444,9 +452,34 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/BrowserSecurityController.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationSuccessHandler.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/authentication/BrowserAuthenticationFailHandler.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/MyUserDetailService.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-browser/src/main/java/com/ryan/security/browser/AppResourceServerConfig.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ryan-security-core/src/main/java/com/ryan/security/core/validate/code/ValidateCodeFilter.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

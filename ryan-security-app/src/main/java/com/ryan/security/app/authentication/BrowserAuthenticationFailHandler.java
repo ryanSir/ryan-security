@@ -1,4 +1,4 @@
-package com.ryan.security.browser.authentication;
+package com.ryan.security.app.authentication;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ryan.security.core.properties.LoginType;
